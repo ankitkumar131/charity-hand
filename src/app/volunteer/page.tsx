@@ -40,18 +40,36 @@ export default function VolunteerPage() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission with a timeout
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const response = await fetch("/api/create-volunteer", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          address: formData.address,
+          skills: formData.skills,
+          availability: formData.availability,
+          experience: formData.experience,
+          motivation: formData.motivation,
+        }),
+      });
 
-      // Show success toast
+      const data = await response.json();
+
+      if (!response.ok || !data.success) {
+        throw new Error(data.message || "Failed to submit application");
+      }
+
       toast({
         title: "Application Submitted!",
         description: "Thank you for volunteering! We'll contact you soon.",
         duration: 5000,
       });
 
-      // Reset form
       setFormData({
         name: "",
         email: "",
@@ -63,11 +81,18 @@ export default function VolunteerPage() {
         motivation: "",
       });
 
-      // Redirect after a delay to allow the user to see the toast
       setTimeout(() => {
         router.push("/");
       }, 3000);
-    }, 1500);
+    } catch (error: any) {
+      toast({
+        title: "Submission Failed",
+        description: error.message || "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -82,8 +107,8 @@ export default function VolunteerPage() {
                   Become a Volunteer
                 </h1>
                 <p className="text-lg text-muted-foreground">
-                  Join our team of dedicated volunteers helping people in financial crisis.
-                  Fill out the form below to get started.
+                  Join our team of dedicated volunteers helping people in
+                  financial crisis. Fill out the form below to get started.
                 </p>
               </div>
 
@@ -167,7 +192,9 @@ export default function VolunteerPage() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="experience">Previous Volunteer Experience</Label>
+                  <Label htmlFor="experience">
+                    Previous Volunteer Experience
+                  </Label>
                   <Textarea
                     id="experience"
                     name="experience"
