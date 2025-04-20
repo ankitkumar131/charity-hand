@@ -98,7 +98,7 @@ export default function Footer() {
               <li>
                 <a
                   className="text-muted-foreground hover:text-primary"
-                  href="/about"
+                  href="/#"
                 >
                   About Us
                 </a>
@@ -106,7 +106,7 @@ export default function Footer() {
               <li>
                 <a
                   className="text-muted-foreground hover:text-primary"
-                  href="/programs"
+                  href="/#"
                 >
                   Our Programs
                 </a>

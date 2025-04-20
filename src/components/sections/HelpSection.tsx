@@ -35,7 +35,7 @@ export default function HelpSection() {
                 Share your time and skills to help families in need. We have
                 various volunteer opportunities available.
               </p>
-              <Link href="#volunteer">
+              <Link href="volunteer">
                 <Button variant="outline" className="w-full">
                   Become a Volunteer
                 </Button>
