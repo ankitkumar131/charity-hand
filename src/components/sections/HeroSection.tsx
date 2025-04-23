@@ -42,7 +42,7 @@ export default function HeroSection() {
                 />
               </Button>
             </Link>
-            <Link href="#learn-more">
+            <Link href="/about">
               <Button
                 variant="outline"
                 className="h-10 rounded-md px-8 bg-white/10 backdrop-blur-sm hover:bg-white/20 border-white/20"
