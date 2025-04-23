@@ -4,6 +4,7 @@ import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import { getRandomImage } from "@/lib/unsplash-images";
 
 export default function AboutPage() {
   return (
@@ -15,7 +16,7 @@ export default function AboutPage() {
             {/* Background image with overlay */}
             <div className="absolute inset-0 z-0">
               <Image
-                src="/assets/images/11.png"
+                src={getRandomImage("about")}
                 alt="Helping hands"
                 fill
                 className="object-cover"
@@ -43,7 +44,7 @@ export default function AboutPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div>
                   <Image 
-                    src="/assets/images/11.png" 
+                    src={getRandomImage("about")} 
                     alt="Our story" 
                     width={500} 
                     height={400} 
@@ -101,7 +102,7 @@ export default function AboutPage() {
                   <div key={i} className="text-center">
                     <div className="w-40 h-40 mx-auto bg-gray-200 rounded-full mb-4 overflow-hidden">
                       <Image 
-                        src={`/assets/images/11.png`} 
+                        src={getRandomImage("team")} 
                         alt={`Team member ${i}`} 
                         width={160} 
                         height={160} 

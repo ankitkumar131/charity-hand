@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import { getRandomImage } from "@/lib/unsplash-images";
 
 export default function HeroSection() {
   return (
@@ -10,7 +11,7 @@ export default function HeroSection() {
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/assets/images/11.png"
+          src={getRandomImage("hero")}
           alt="Helping hands"
           fill
           className="object-cover"

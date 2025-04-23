@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { getRandomImage } from "@/lib/unsplash-images";
 
 export default function SuccessStoriesPage() {
   const stories = [
@@ -15,7 +16,7 @@ export default function SuccessStoriesPage() {
       name: "Maria S.",
       location: "Pune, Maharashtra",
       story: "After losing my job due to company downsizing, I fell behind on rent and was facing eviction with my two children. Helping Hand provided emergency rental assistance that kept us in our home while I searched for new employment. Three months later, I secured a new position and am now financially stable again. The support came at the most critical time in our lives.",
-      image: "/assets/images/11.png"
+      image: getRandomImage("successStories")
     },
     {
       id: 2,
@@ -23,7 +24,7 @@ export default function SuccessStoriesPage() {
       name: "Rajesh K.",
       location: "Mumbai, Maharashtra",
       story: "When my daughter needed emergency surgery, our insurance didn't cover the full cost. The medical bills were overwhelming, and we were considering taking out high-interest loans. Helping Hand stepped in with financial assistance that covered the remaining hospital costs. Today, my daughter is healthy, and we're not burdened with crushing debt.",
-      image: "/assets/images/11.png"
+      image: getRandomImage("successStories")
     },
     {
       id: 3,
@@ -31,7 +32,7 @@ export default function SuccessStoriesPage() {
       name: "Priya T.",
       location: "Bangalore, Karnataka",
       story: "After my parents lost their business during the pandemic, I thought I would have to drop out of university. Helping Hand provided an emergency education grant that allowed me to continue my studies. I've now graduated with a degree in computer science and secured a job that helps support my family.",
-      image: "/assets/images/11.png"
+      image: getRandomImage("successStories")
     },
     {
       id: 4,
@@ -39,7 +40,7 @@ export default function SuccessStoriesPage() {
       name: "Amit and Sunita P.",
       location: "Chennai, Tamil Nadu",
       story: "When floods destroyed our home and belongings, we were left with nothing. Helping Hand provided immediate financial relief for temporary housing and essential items. They also connected us with resources for long-term recovery. Six months later, we've been able to repair our home and return to normal life.",
-      image: "/assets/images/11.png"
+      image: getRandomImage("successStories")
     }
   ];
 
@@ -52,7 +53,7 @@ export default function SuccessStoriesPage() {
             {/* Background image with overlay */}
             <div className="absolute inset-0 z-0">
               <Image
-                src="/assets/images/11.png"
+                src={getRandomImage("successStories")}
                 alt="Success stories"
                 fill
                 className="object-cover"

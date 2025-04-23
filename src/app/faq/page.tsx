@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { getRandomImage } from "@/lib/unsplash-images";
 
 export default function FAQPage() {
   const faqCategories = [
@@ -120,7 +121,7 @@ export default function FAQPage() {
             {/* Background image with overlay */}
             <div className="absolute inset-0 z-0">
               <Image
-                src="/assets/images/11.png"
+                src={getRandomImage("faq")}
                 alt="Frequently Asked Questions"
                 fill
                 className="object-cover"

@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import { getRandomImage } from "@/lib/unsplash-images";
 
 export default function MissionSection() {
   return (
@@ -31,7 +32,7 @@ export default function MissionSection() {
           </div>
           <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
             <Image
-              src="/assets/images/children-aid.jpg"
+              src={getRandomImage("mission")}
               alt="Smiling children receiving aid"
               fill
               className="object-cover"

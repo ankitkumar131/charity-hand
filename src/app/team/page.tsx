@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { getRandomImage } from "@/lib/unsplash-images";
 
 export default function TeamPage() {
   const teamMembers = [
@@ -14,42 +15,42 @@ export default function TeamPage() {
       name: "Sarah Johnson",
       position: "Executive Director",
       bio: "Sarah has over 15 years of experience in nonprofit management and is passionate about creating sustainable solutions to financial hardship.",
-      image: "/assets/images/11.png"
+      image: getRandomImage("team")
     },
     {
       id: 2,
       name: "Michael Chen",
       position: "Director of Operations",
       bio: "Michael oversees our day-to-day operations and ensures that our programs run efficiently to maximize our impact.",
-      image: "/assets/images/11.png"
+      image: getRandomImage("team")
     },
     {
       id: 3,
       name: "Priya Patel",
       position: "Financial Aid Coordinator",
       bio: "Priya works directly with recipients to assess needs and coordinate financial assistance in the most effective way possible.",
-      image: "/assets/images/11.png"
+      image: getRandomImage("team")
     },
     {
       id: 4,
       name: "James Wilson",
       position: "Volunteer Coordinator",
       bio: "James manages our growing network of volunteers and creates meaningful opportunities for community involvement.",
-      image: "/assets/images/11.png"
+      image: getRandomImage("team")
     },
     {
       id: 5,
       name: "Aisha Mohammed",
       position: "Outreach Specialist",
       bio: "Aisha develops partnerships with community organizations to extend our reach and identify those most in need of assistance.",
-      image: "/assets/images/11.png"
+      image: getRandomImage("team")
     },
     {
       id: 6,
       name: "Robert Garcia",
       position: "Development Director",
       bio: "Robert leads our fundraising initiatives and donor relations to ensure sustainable funding for our programs.",
-      image: "/assets/images/11.png"
+      image: getRandomImage("team")
     }
   ];
 
@@ -62,7 +63,7 @@ export default function TeamPage() {
             {/* Background image with overlay */}
             <div className="absolute inset-0 z-0">
               <Image
-                src="/assets/images/11.png"
+                src={getRandomImage("team")}
                 alt="Team collaboration"
                 fill
                 className="object-cover"

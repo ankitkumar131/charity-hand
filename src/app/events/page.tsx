@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { getRandomImage } from "@/lib/unsplash-images";
 
 export default function EventsPage() {
   const upcomingEvents = [
@@ -16,7 +17,7 @@ export default function EventsPage() {
       time: "6:00 PM - 10:00 PM",
       location: "Grand Hyatt, Mumbai",
       description: "Join us for an elegant evening of dinner, entertainment, and fundraising. All proceeds will support our emergency financial relief programs.",
-      image: "/assets/images/11.png"
+      image: getRandomImage("events")
     },
     {
       id: 2,
@@ -25,7 +26,7 @@ export default function EventsPage() {
       time: "8:00 AM - 12:00 PM",
       location: "Cubbon Park, Bangalore",
       description: "Walk with us to raise awareness and funds for families facing financial hardship. Registration includes t-shirt and refreshments.",
-      image: "/assets/images/11.png"
+      image: getRandomImage("events")
     },
     {
       id: 3,
@@ -34,7 +35,7 @@ export default function EventsPage() {
       time: "10:00 AM - 2:00 PM",
       location: "Community Center, Pune",
       description: "Free workshop offering practical advice on budgeting, saving, and financial planning for families. Lunch will be provided.",
-      image: "/assets/images/11.png"
+      image: getRandomImage("events")
     }
   ];
 
@@ -45,7 +46,7 @@ export default function EventsPage() {
       date: "July 20, 2025",
       location: "Taj Hotel, Delhi",
       description: "A special evening to thank our generous donors and share the impact of their contributions over the past year.",
-      image: "/assets/images/11.png"
+      image: getRandomImage("events")
     },
     {
       id: 5,
@@ -53,7 +54,7 @@ export default function EventsPage() {
       date: "June 5, 2025",
       location: "City Amphitheater, Chennai",
       description: "A night of music and entertainment featuring local artists, raising funds for our education support programs.",
-      image: "/assets/images/11.png"
+      image: getRandomImage("events")
     }
   ];
 
@@ -66,7 +67,7 @@ export default function EventsPage() {
             {/* Background image with overlay */}
             <div className="absolute inset-0 z-0">
               <Image
-                src="/assets/images/11.png"
+                src={getRandomImage("events")}
                 alt="Charity events"
                 fill
                 className="object-cover"
