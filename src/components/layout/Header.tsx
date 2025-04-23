@@ -47,6 +47,18 @@ export default function Header() {
           <Link className="text-sm font-medium hover:text-primary" href="#help">
             Ways to Help
           </Link>
+          <Link className="text-sm font-medium hover:text-primary" href="/team">
+            Our Team
+          </Link>
+          <Link className="text-sm font-medium hover:text-primary" href="/success-stories">
+            Success Stories
+          </Link>
+          <Link className="text-sm font-medium hover:text-primary" href="/events">
+            Events
+          </Link>
+          <Link className="text-sm font-medium hover:text-primary" href="/faq">
+            FAQ
+          </Link>
         </nav>
 
         <div className="flex items-center gap-4">
@@ -113,6 +125,34 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
             >
               Ways to Help
+            </Link>
+            <Link
+              className="text-sm font-medium hover:text-primary py-2"
+              href="/team"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Our Team
+            </Link>
+            <Link
+              className="text-sm font-medium hover:text-primary py-2"
+              href="/success-stories"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Success Stories
+            </Link>
+            <Link
+              className="text-sm font-medium hover:text-primary py-2"
+              href="/events"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Events
+            </Link>
+            <Link
+              className="text-sm font-medium hover:text-primary py-2"
+              href="/faq"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              FAQ
             </Link>
             <Link
               href="#donate"

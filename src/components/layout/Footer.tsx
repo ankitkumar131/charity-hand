@@ -98,7 +98,7 @@ export default function Footer() {
               <li>
                 <a
                   className="text-muted-foreground hover:text-primary"
-                  href="/#"
+                  href="/about"
                 >
                   About Us
                 </a>
@@ -106,9 +106,9 @@ export default function Footer() {
               <li>
                 <a
                   className="text-muted-foreground hover:text-primary"
-                  href="/#"
+                  href="/team"
                 >
-                  Our Programs
+                  Our Team
                 </a>
               </li>
               <li>
@@ -122,17 +122,25 @@ export default function Footer() {
               <li>
                 <a
                   className="text-muted-foreground hover:text-primary"
-                  href="/get-involved"
+                  href="/events"
                 >
-                  Get Involved
+                  Events
                 </a>
               </li>
               <li>
                 <a
                   className="text-muted-foreground hover:text-primary"
-                  href="/contact"
+                  href="/faq"
                 >
-                  Contact Us
+                  FAQ
+                </a>
+              </li>
+              <li>
+                <a
+                  className="text-muted-foreground hover:text-primary"
+                  href="/volunteer"
+                >
+                  Volunteer
                 </a>
               </li>
             </ul>
